@@ -1,0 +1,995 @@
+{
+  "_note": "Source: salon price list + owner-provided hours/phone/map (Malak's Beauty Club, Ain el Remmaneh branch). Prices in USD. duration (minutes) and staff are NOT from the salon: they are working assumptions used for availability - edit them. bookable:false = not booked on its own.",
+  "name": "Malak's Beauty Club",
+  "location": "Ain el Remmaneh branch, Lebanon",
+  "phone": "+961 71 41 71 30",
+  "currency": "USD",
+  "timezone": "Asia/Beirut",
+  "slotMinutes": 30,
+  "staff": 2,
+  "hoursConfirmed": true,
+  "hours": {
+    "mon": [
+      "10:00",
+      "19:00"
+    ],
+    "tue": [
+      "10:00",
+      "19:00"
+    ],
+    "wed": [
+      "10:00",
+      "19:00"
+    ],
+    "thu": [
+      "10:00",
+      "19:00"
+    ],
+    "fri": [
+      "10:00",
+      "19:00"
+    ],
+    "sat": [
+      "10:00",
+      "19:00"
+    ],
+    "sun": [
+      "10:00",
+      "19:00"
+    ]
+  },
+  "knownGaps": [
+    "Street address text / landmarks / parking, and whether there are other branches (only the area and the map link are known)",
+    "Wax services other than those listed (the list was partly cut off) and extra Body Care items",
+    "Which of the two laser prices applies (for Legs and Arms)",
+    "Any offers, packages, deposits, cancellation policy, payment methods",
+    "Staff names"
+  ],
+  "services": [
+    {
+      "id": "brushing",
+      "name": {
+        "en": "Brushing",
+        "ar": "بروشينغ"
+      },
+      "category": "Hair",
+      "price": 7,
+      "priceFrom": true,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "wavy",
+      "name": {
+        "en": "Wavy",
+        "ar": "تمويج"
+      },
+      "category": "Hair",
+      "price": 10,
+      "priceFrom": true,
+      "duration": 45,
+      "bookable": true
+    },
+    {
+      "id": "hairmask",
+      "name": {
+        "en": "Hair Mask",
+        "ar": "ماسك شعر"
+      },
+      "category": "Hair",
+      "price": 25,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "rootscolor",
+      "name": {
+        "en": "Roots Color",
+        "ar": "صبغة جذور"
+      },
+      "category": "Hair",
+      "price": 25,
+      "priceFrom": true,
+      "duration": 90,
+      "bookable": true
+    },
+    {
+      "id": "haircolor",
+      "name": {
+        "en": "Hair Color",
+        "ar": "صبغة شعر"
+      },
+      "category": "Hair",
+      "price": 50,
+      "priceFrom": true,
+      "duration": 120,
+      "bookable": true
+    },
+    {
+      "id": "haircut",
+      "name": {
+        "en": "Hair Cut",
+        "ar": "قص شعر"
+      },
+      "category": "Hair",
+      "price": 25,
+      "priceFrom": false,
+      "duration": 45,
+      "bookable": true
+    },
+    {
+      "id": "hairstyle",
+      "name": {
+        "en": "Hairstyle",
+        "ar": "تسريحة"
+      },
+      "category": "Hair",
+      "price": 25,
+      "priceFrom": true,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "blowout",
+      "name": {
+        "en": "Blowout",
+        "ar": "بلو أوت"
+      },
+      "category": "Hair",
+      "price": 40,
+      "priceFrom": true,
+      "duration": 45,
+      "bookable": true
+    },
+    {
+      "id": "highlights",
+      "name": {
+        "en": "Highlight / Lowlight",
+        "ar": "هايلايت / لولايت"
+      },
+      "category": "Hair",
+      "price": 60,
+      "priceFrom": true,
+      "duration": 150,
+      "bookable": true
+    },
+    {
+      "id": "colorrinse",
+      "name": {
+        "en": "Color Rinse",
+        "ar": "كولور رينس"
+      },
+      "category": "Hair",
+      "price": 20,
+      "priceFrom": true,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "keratin",
+      "name": {
+        "en": "Keratin",
+        "ar": "كيراتين"
+      },
+      "category": "Hair Treatments",
+      "price": 60,
+      "priceFrom": false,
+      "duration": 150,
+      "bookable": true,
+      "priceTo": 250,
+      "note": "Price depends on hair length/type: 60$ to 250$."
+    },
+    {
+      "id": "collagen",
+      "name": {
+        "en": "Collagen",
+        "ar": "كولاجين"
+      },
+      "category": "Hair Treatments",
+      "price": 70,
+      "priceFrom": false,
+      "duration": 150,
+      "bookable": true,
+      "priceTo": 250,
+      "note": "Price depends on hair length/type: 70$ to 250$."
+    },
+    {
+      "id": "hairbotox",
+      "name": {
+        "en": "Hair Botox",
+        "ar": "بوتوكس شعر"
+      },
+      "category": "Hair Treatments",
+      "price": 70,
+      "priceFrom": false,
+      "duration": 150,
+      "bookable": true,
+      "priceTo": 250,
+      "note": "Price depends on hair length/type: 70$ to 250$."
+    },
+    {
+      "id": "scalp",
+      "name": {
+        "en": "Scalp Treatment",
+        "ar": "علاج فروة الرأس"
+      },
+      "category": "Hair Treatments",
+      "price": 30,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "polish",
+      "name": {
+        "en": "Polish",
+        "ar": "طلاء أظافر"
+      },
+      "category": "Nails",
+      "price": 5,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "french",
+      "name": {
+        "en": "French",
+        "ar": "فرنش"
+      },
+      "category": "Nails",
+      "price": 7,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "russianmanicure",
+      "name": {
+        "en": "Russian Manicure",
+        "ar": "مانيكير روسي"
+      },
+      "category": "Nails",
+      "price": 7,
+      "priceFrom": false,
+      "duration": 45,
+      "bookable": true
+    },
+    {
+      "id": "pedicure",
+      "name": {
+        "en": "Pedicure",
+        "ar": "بديكير"
+      },
+      "category": "Nails",
+      "price": 8,
+      "priceFrom": false,
+      "duration": 45,
+      "bookable": true
+    },
+    {
+      "id": "russianpedicure",
+      "name": {
+        "en": "Russian Pedicure",
+        "ar": "بديكير روسي"
+      },
+      "category": "Nails",
+      "price": 10,
+      "priceFrom": false,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "vippedicure",
+      "name": {
+        "en": "VIP Pedicure",
+        "ar": "بديكير VIP"
+      },
+      "category": "Nails",
+      "price": 20,
+      "priceFrom": false,
+      "duration": 75,
+      "bookable": true
+    },
+    {
+      "id": "paraffin",
+      "name": {
+        "en": "Paraffin Treatment",
+        "ar": "علاج بارافين"
+      },
+      "category": "Nails",
+      "price": 20,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "fakenails",
+      "name": {
+        "en": "Fake Nails",
+        "ar": "أظافر اصطناعية"
+      },
+      "category": "Nails",
+      "price": 25,
+      "priceFrom": false,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "gelish",
+      "name": {
+        "en": "Gelish",
+        "ar": "جيلش"
+      },
+      "category": "Gel & Extensions",
+      "price": 17,
+      "priceFrom": false,
+      "duration": 45,
+      "bookable": true
+    },
+    {
+      "id": "fiber",
+      "name": {
+        "en": "Fiber (Gel + Color + Russian)",
+        "ar": "فايبر (جل + لون + روسي)"
+      },
+      "category": "Gel & Extensions",
+      "price": 70,
+      "priceFrom": false,
+      "duration": 90,
+      "bookable": true
+    },
+    {
+      "id": "rubberbase",
+      "name": {
+        "en": "Rubber Base + Manicure",
+        "ar": "رابر بيس + مانيكير"
+      },
+      "category": "Gel & Extensions",
+      "price": 25,
+      "priceFrom": false,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "rubbergelish",
+      "name": {
+        "en": "Rubber + Gelish + Manicure",
+        "ar": "رابر + جيلش + مانيكير"
+      },
+      "category": "Gel & Extensions",
+      "price": 35,
+      "priceFrom": false,
+      "duration": 75,
+      "bookable": true
+    },
+    {
+      "id": "gelextension",
+      "name": {
+        "en": "Gel Extension",
+        "ar": "تطويل جل"
+      },
+      "category": "Gel & Extensions",
+      "price": 60,
+      "priceFrom": false,
+      "duration": 90,
+      "bookable": true
+    },
+    {
+      "id": "ombre",
+      "name": {
+        "en": "Ombre: Chrome / Cat Eye / French (add-on)",
+        "ar": "أومبريه: كروم / كات آي / فرنش (إضافة)"
+      },
+      "category": "Gel & Extensions",
+      "price": 5,
+      "priceFrom": false,
+      "duration": 0,
+      "bookable": false,
+      "note": "Add-on: +5$ on top of a gel service. Not booked on its own."
+    },
+    {
+      "id": "classiclashes",
+      "name": {
+        "en": "Classic Lashes - Full Set",
+        "ar": "رموش كلاسيك - طقم كامل"
+      },
+      "category": "Lashes",
+      "price": 45,
+      "priceFrom": false,
+      "duration": 90,
+      "bookable": true
+    },
+    {
+      "id": "classiclashes2w",
+      "name": {
+        "en": "Classic Lashes - Refill 2 Weeks",
+        "ar": "رموش كلاسيك - ريفيل أسبوعين"
+      },
+      "category": "Lashes",
+      "price": 25,
+      "priceFrom": false,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "classiclashes3w",
+      "name": {
+        "en": "Classic Lashes - Refill 3 Weeks",
+        "ar": "رموش كلاسيك - ريفيل 3 أسابيع"
+      },
+      "category": "Lashes",
+      "price": 35,
+      "priceFrom": false,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "hybridlashes",
+      "name": {
+        "en": "Hybrid Lashes - Full Set",
+        "ar": "رموش هايبرد - طقم كامل"
+      },
+      "category": "Lashes",
+      "price": 50,
+      "priceFrom": false,
+      "duration": 105,
+      "bookable": true
+    },
+    {
+      "id": "hybridlashes2w",
+      "name": {
+        "en": "Hybrid Lashes - Refill 2 Weeks",
+        "ar": "رموش هايبرد - ريفيل أسبوعين"
+      },
+      "category": "Lashes",
+      "price": 30,
+      "priceFrom": false,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "hybridlashes3w",
+      "name": {
+        "en": "Hybrid Lashes - Refill 3 Weeks",
+        "ar": "رموش هايبرد - ريفيل 3 أسابيع"
+      },
+      "category": "Lashes",
+      "price": 40,
+      "priceFrom": false,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "volumelashes",
+      "name": {
+        "en": "Volume Lashes - Full Set",
+        "ar": "رموش فوليوم - طقم كامل"
+      },
+      "category": "Lashes",
+      "price": 70,
+      "priceFrom": false,
+      "duration": 120,
+      "bookable": true
+    },
+    {
+      "id": "volumelashes2w",
+      "name": {
+        "en": "Volume Lashes - Refill 2 Weeks",
+        "ar": "رموش فوليوم - ريفيل أسبوعين"
+      },
+      "category": "Lashes",
+      "price": 40,
+      "priceFrom": false,
+      "duration": 75,
+      "bookable": true
+    },
+    {
+      "id": "volumelashes3w",
+      "name": {
+        "en": "Volume Lashes - Refill 3 Weeks",
+        "ar": "رموش فوليوم - ريفيل 3 أسابيع"
+      },
+      "category": "Lashes",
+      "price": 50,
+      "priceFrom": false,
+      "duration": 75,
+      "bookable": true
+    },
+    {
+      "id": "classicsilk",
+      "name": {
+        "en": "Classic Silk Lashes",
+        "ar": "رموش سيلك كلاسيك"
+      },
+      "category": "Lashes",
+      "price": 80,
+      "priceFrom": false,
+      "duration": 120,
+      "bookable": true
+    },
+    {
+      "id": "hybridsilk",
+      "name": {
+        "en": "Hybrid Silk Lashes",
+        "ar": "رموش سيلك هايبرد"
+      },
+      "category": "Lashes",
+      "price": 90,
+      "priceFrom": false,
+      "duration": 120,
+      "bookable": true
+    },
+    {
+      "id": "volumesilk",
+      "name": {
+        "en": "Volume Silk Lashes",
+        "ar": "رموش سيلك فوليوم"
+      },
+      "category": "Lashes",
+      "price": 120,
+      "priceFrom": false,
+      "duration": 150,
+      "bookable": true
+    },
+    {
+      "id": "silkrefill",
+      "name": {
+        "en": "Silk Lashes Refill",
+        "ar": "ريفيل رموش سيلك"
+      },
+      "category": "Lashes",
+      "price": 40,
+      "priceFrom": false,
+      "duration": 75,
+      "bookable": true,
+      "priceTo": 80,
+      "note": "Price depends on the silk type: 40$ to 80$."
+    },
+    {
+      "id": "browlamination",
+      "name": {
+        "en": "Brow Lamination & Reshaping",
+        "ar": "تلبيس وتشكيل الحواجب"
+      },
+      "category": "Lash & Brow",
+      "price": 20,
+      "priceFrom": false,
+      "duration": 45,
+      "bookable": true
+    },
+    {
+      "id": "browtint",
+      "name": {
+        "en": "Eyebrow Tint",
+        "ar": "صبغة حواجب"
+      },
+      "category": "Lash & Brow",
+      "price": 10,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "lashremoval",
+      "name": {
+        "en": "Lash Removal",
+        "ar": "إزالة الرموش"
+      },
+      "category": "Lash & Brow",
+      "price": 8,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "lashbrowcombo",
+      "name": {
+        "en": "Combo (Lash + Brow)",
+        "ar": "كومبو (رموش + حواجب)"
+      },
+      "category": "Lash & Brow",
+      "price": 45,
+      "priceFrom": false,
+      "duration": 90,
+      "bookable": true
+    },
+    {
+      "id": "makeup",
+      "name": {
+        "en": "Full Makeup",
+        "ar": "مكياج كامل"
+      },
+      "category": "Makeup",
+      "price": 80,
+      "priceFrom": false,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "engagementmakeup",
+      "name": {
+        "en": "Engagement Makeup",
+        "ar": "مكياج خطوبة"
+      },
+      "category": "Makeup",
+      "price": 100,
+      "priceFrom": false,
+      "duration": 90,
+      "bookable": true
+    },
+    {
+      "id": "bridalmakeup",
+      "name": {
+        "en": "Bridal Makeup",
+        "ar": "مكياج عروس"
+      },
+      "category": "Makeup",
+      "price": 200,
+      "priceFrom": false,
+      "duration": 120,
+      "bookable": true
+    },
+    {
+      "id": "laserfullbody",
+      "name": {
+        "en": "Laser - Full Body",
+        "ar": "ليزر - كامل الجسم"
+      },
+      "category": "Laser",
+      "price": 95,
+      "priceFrom": false,
+      "duration": 90,
+      "bookable": true
+    },
+    {
+      "id": "laserlegs",
+      "name": {
+        "en": "Laser - Legs",
+        "ar": "ليزر - الرجلين"
+      },
+      "category": "Laser",
+      "price": 15,
+      "priceFrom": false,
+      "duration": 45,
+      "bookable": true,
+      "priceTo": 30,
+      "note": "The price list shows two prices (15$ / 30$); the team confirms which applies."
+    },
+    {
+      "id": "laserarms",
+      "name": {
+        "en": "Laser - Arms",
+        "ar": "ليزر - اليدين"
+      },
+      "category": "Laser",
+      "price": 15,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true,
+      "priceTo": 20,
+      "note": "The price list shows two prices (15$ / 20$); the team confirms which applies."
+    },
+    {
+      "id": "laserunderarms",
+      "name": {
+        "en": "Laser - Underarms",
+        "ar": "ليزر - الإبطين"
+      },
+      "category": "Laser",
+      "price": 20,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "laserbikini",
+      "name": {
+        "en": "Laser - Bikini",
+        "ar": "ليزر - بيكيني"
+      },
+      "category": "Laser",
+      "price": 30,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "laserback",
+      "name": {
+        "en": "Laser - Back",
+        "ar": "ليزر - الظهر"
+      },
+      "category": "Laser",
+      "price": 10,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true,
+      "priceTo": 20,
+      "note": "Price range 10$ to 20$ depending on area size."
+    },
+    {
+      "id": "laserbelly",
+      "name": {
+        "en": "Laser - Belly",
+        "ar": "ليزر - البطن"
+      },
+      "category": "Laser",
+      "price": 12,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true,
+      "priceTo": 15,
+      "note": "Price range 12$ to 15$."
+    },
+    {
+      "id": "laserneckchest",
+      "name": {
+        "en": "Laser - Neck & Chest",
+        "ar": "ليزر - الرقبة والصدر"
+      },
+      "category": "Laser",
+      "price": 10,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "laserface",
+      "name": {
+        "en": "Laser - Full Face",
+        "ar": "ليزر - الوجه كامل"
+      },
+      "category": "Laser",
+      "price": 25,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "waxlegs",
+      "name": {
+        "en": "Wax - Full Legs",
+        "ar": "واكس - رجلين كاملتين"
+      },
+      "category": "Wax",
+      "price": 12,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "waxbikini",
+      "name": {
+        "en": "Wax - Bikini",
+        "ar": "واكس - بيكيني"
+      },
+      "category": "Wax",
+      "price": 18,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "waxface",
+      "name": {
+        "en": "Wax - Full Face",
+        "ar": "واكس - الوجه كامل"
+      },
+      "category": "Wax",
+      "price": 6,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "waxnose",
+      "name": {
+        "en": "Wax - Nose",
+        "ar": "واكس - الأنف"
+      },
+      "category": "Wax",
+      "price": 3,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "waxextra",
+      "name": {
+        "en": "Wax - Extra Area",
+        "ar": "واكس - منطقة إضافية"
+      },
+      "category": "Wax",
+      "price": 5,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "threadbrows",
+      "name": {
+        "en": "Threading - Eyebrows",
+        "ar": "خيط - حواجب"
+      },
+      "category": "Threading",
+      "price": 5,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "threadlip",
+      "name": {
+        "en": "Threading - Upper Lip",
+        "ar": "خيط - الشفة العليا"
+      },
+      "category": "Threading",
+      "price": 2,
+      "priceFrom": false,
+      "duration": 30,
+      "bookable": true
+    },
+    {
+      "id": "basicfacial",
+      "name": {
+        "en": "Basic Facial",
+        "ar": "تنظيف بشرة عادي"
+      },
+      "category": "Skincare",
+      "price": 30,
+      "priceFrom": false,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "deepfacial",
+      "name": {
+        "en": "Deep Cleaning Facial",
+        "ar": "تنظيف بشرة عميق"
+      },
+      "category": "Skincare",
+      "price": 40,
+      "priceFrom": false,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "glowfacial",
+      "name": {
+        "en": "Glow Facial",
+        "ar": "غلو فيشل"
+      },
+      "category": "Skincare",
+      "price": 45,
+      "priceFrom": false,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "microneedling",
+      "name": {
+        "en": "Microneedling",
+        "ar": "ميكرونيدلينغ"
+      },
+      "category": "Skincare",
+      "price": 50,
+      "priceFrom": true,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "carbonlaser",
+      "name": {
+        "en": "Carbon Laser",
+        "ar": "كربون ليزر"
+      },
+      "category": "Skincare",
+      "price": 30,
+      "priceFrom": true,
+      "duration": 45,
+      "bookable": true
+    },
+    {
+      "id": "bridalskin",
+      "name": {
+        "en": "Bridal Skin Package",
+        "ar": "باقة العناية بالبشرة للعروس"
+      },
+      "category": "Skincare",
+      "price": 80,
+      "priceFrom": false,
+      "duration": 90,
+      "bookable": true
+    },
+    {
+      "id": "bodyglow",
+      "name": {
+        "en": "Body Glow (Scrub)",
+        "ar": "بودي غلو (تقشير)"
+      },
+      "category": "Body Care",
+      "price": 35,
+      "priceFrom": false,
+      "duration": 60,
+      "bookable": true
+    },
+    {
+      "id": "massage",
+      "name": {
+        "en": "Relax Massage (women only)",
+        "ar": "مساج استرخاء (للنساء فقط)"
+      },
+      "category": "Body Care",
+      "price": 40,
+      "priceFrom": false,
+      "duration": 60,
+      "bookable": true,
+      "note": "Women only."
+    }
+  ],
+  "upsells": {
+    "haircut": [
+      "blowout",
+      "hairmask"
+    ],
+    "blowout": [
+      "hairmask"
+    ],
+    "haircolor": [
+      "hairmask",
+      "keratin"
+    ],
+    "rootscolor": [
+      "hairmask"
+    ],
+    "highlights": [
+      "hairmask"
+    ],
+    "gelish": [
+      "pedicure"
+    ],
+    "russianmanicure": [
+      "russianpedicure"
+    ],
+    "pedicure": [
+      "russianmanicure"
+    ],
+    "russianpedicure": [
+      "russianmanicure"
+    ],
+    "fiber": [
+      "vippedicure"
+    ],
+    "classiclashes": [
+      "browlamination"
+    ],
+    "hybridlashes": [
+      "browlamination"
+    ],
+    "volumelashes": [
+      "browlamination"
+    ],
+    "browlamination": [
+      "browtint"
+    ],
+    "basicfacial": [
+      "glowfacial"
+    ],
+    "deepfacial": [
+      "glowfacial"
+    ],
+    "makeup": [
+      "classiclashes"
+    ],
+    "bridalmakeup": [
+      "bridalskin"
+    ],
+    "engagementmakeup": [
+      "classiclashes"
+    ]
+  },
+  "offers": [],
+  "mapLink": "https://www.bing.com/maps?q=Malak%27s+Beauty+Club&cp=33.858829~35.522896&lvl=17"
+}

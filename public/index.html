@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Malak's Beauty Club · AI Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Tajawal:wght@400;500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="mark brand-mark">M</span><div><h1 class="brand-name">Malak's Beauty Club</h1><small>Ain el Remmaneh · AI assistant demo</small></div></div>
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="chat" role="tab">Customer chat</button>
+    <button class="tab" data-tab="dash" role="tab">Owner dashboard <span id="count" class="badge">0</span></button>
+  </nav>
+  <button id="resetDemo" class="ghost" title="Clear bookings and restore the 3 sample bookings">Reset demo</button>
+</header>
+
+<main>
+  <section id="chat" class="panel active">
+    <div class="phone">
+      <div class="phone-head">
+        <span class="avatar brand-mark">M</span>
+        <div class="who"><b class="brand-name">Malak's Beauty Club</b><small id="status">online</small></div>
+        <button id="newChat" class="icon" title="New conversation" aria-label="New conversation">↻</button>
+      </div>
+      <div id="msgs" class="msgs" aria-live="polite"></div>
+      <div id="quick" class="quick"></div>
+      <form id="form" class="composer" autocomplete="off">
+        <input id="input" dir="auto" placeholder="Type a message… اكتب رسالتك" maxlength="1000" enterkeyhint="send">
+        <button type="submit" id="send" aria-label="Send">➤</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="dash" class="panel">
+    <div class="dash">
+      <div class="dash-head">
+        <div><h2>Bookings</h2><p>Live view · updates the moment the assistant books or cancels</p></div>
+        <span class="live"><i></i> Live</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Name</th><th>Phone</th><th>Service</th><th>Date</th><th>Time</th><th>Source</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <p id="empty" class="empty" hidden>No bookings yet.</p>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
