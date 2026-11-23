@@ -77,3 +77,11 @@ tr.new td{animation:flash 2.5s ease-out}
   td{border:0;padding:3px 0;white-space:normal}
   td::before{content:attr(data-l);color:var(--muted);display:inline-block;width:70px;font-size:12px}
 }
+
+.gate{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:16px;background:radial-gradient(1000px 500px at 20% -10%,#f6dcd6 0,transparent 60%),var(--cream)}
+.gate[hidden]{display:none}
+.gate-box{width:100%;max-width:340px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 24px;text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center;box-shadow:0 20px 50px -25px rgba(120,70,60,.35)}
+.gate-box p{color:var(--muted);font-size:14px;line-height:1.5}.gate-box .err{color:#b3433f}
+.gate-box input{width:100%;border:1px solid var(--line);border-radius:999px;padding:12px 16px;font:400 15px 'Jost',sans-serif;outline:none;text-align:center}
+.gate-box input:focus{border-color:var(--rose)}
+.gate-box button{width:100%;border:0;border-radius:999px;padding:12px;background:linear-gradient(135deg,var(--gold),var(--rose));color:#fff;font:500 15px 'Jost',sans-serif;cursor:pointer}

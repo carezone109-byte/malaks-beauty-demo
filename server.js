@@ -18,6 +18,26 @@ function limit(req, res, next) {
   arr.push(now); hits.set(k, arr); next();
 }
 
+// Optional access code (env ACCESS_CODE). When set, every API call except health/salon/gate needs it.
+const crypto = require('crypto');
+const ACCESS_CODE = process.env.ACCESS_CODE || '';
+const same = (a, b) => { const x = Buffer.from(String(a)), y = Buffer.from(String(b)); return x.length === y.length && crypto.timingSafeEqual(x, y); };
+const bad = new Map();
+function tooManyTries(ip) { const now = Date.now(), a = (bad.get(ip) || []).filter((t) => now - t < 600e3); bad.set(ip, a); return a.length >= 10; }
+app.get('/api/gate', (req, res) => res.json({ required: !!ACCESS_CODE }));
+app.post('/api/gate', (req, res) => {
+  if (!ACCESS_CODE) return res.json({ ok: true });
+  if (tooManyTries(req.ip)) return res.status(429).json({ ok: false });
+  if (same(req.body?.code || '', ACCESS_CODE)) return res.json({ ok: true });
+  bad.get(req.ip).push(Date.now()); res.status(401).json({ ok: false });
+});
+app.use('/api', (req, res, next) => {
+  if (!ACCESS_CODE || ['/health', '/salon', '/gate'].includes(req.path)) return next();
+  const code = req.get('x-access-code') || req.query.code || '';
+  if (same(code, ACCESS_CODE)) return next();
+  res.status(401).json({ error: 'access code required', reply: 'Access code required.' });
+});
+
 app.post('/api/chat', limit, async (req, res) => {
   const { sessionId, message } = req.body || {};
   if (!sessionId || typeof message !== 'string' || !message.trim()) return res.status(400).json({ error: 'sessionId and message required' });

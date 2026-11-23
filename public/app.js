@@ -1,4 +1,9 @@
 const $ = (s) => document.querySelector(s);
+let CODE = '';
+try { CODE = sessionStorage.getItem('code') || ''; } catch {}
+const _fetch = window.fetch.bind(window);
+window.fetch = (url, opts = {}) => (typeof url === 'string' && url.startsWith('/api/') && CODE
+  ? _fetch(url, { ...opts, headers: { ...(opts.headers || {}), 'x-access-code': CODE } }) : _fetch(url, opts));
 const msgs = $('#msgs'), input = $('#input'), form = $('#form'), quick = $('#quick'), sendBtn = $('#send');
 const AR = /[؀-ۿ]/;
 let sessionId = crypto.randomUUID();
@@ -106,17 +111,44 @@ function render(list) {
     <td data-l="Date">${fmtDate(b.date)}</td><td data-l="Time">${b.time}</td>
     <td data-l="Source"><span class="tag ${b.source === 'agent' ? 'agent' : ''}">${b.source === 'agent' ? 'AI assistant' : 'sample'}</span></td></tr>`).join('');
 }
-const es = new EventSource('/api/events');
-es.onmessage = (e) => render(JSON.parse(e.data));
+let es;
+function connectEvents() {
+  if (es) es.close();
+  es = new EventSource('/api/events' + (CODE ? '?code=' + encodeURIComponent(CODE) : ''));
+  es.onmessage = (e) => render(JSON.parse(e.data));
+}
 
 $('#resetDemo').onclick = async () => {
   if (!confirm('Clear all bookings and restore the 3 sample bookings?')) return;
   await fetch('/api/reset', { method: 'POST' }); startChat();
 };
 
+function boot() {
+connectEvents();
 fetch('/api/salon').then((r) => r.json()).then((s) => {
   SALON = s; document.title = s.name + ' · AI Assistant';
   document.querySelectorAll('.brand-name').forEach((e) => (e.textContent = s.name));
   document.querySelectorAll('.brand-mark').forEach((e) => (e.textContent = s.name[0]));
   document.querySelector('.brand small').textContent = (s.location || '') + ' · AI assistant demo';
 }).catch(() => {}).finally(startChat);
+}
+
+// ---- access code gate ----
+async function unlock(code) {
+  const r = await _fetch('/api/gate', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code }) });
+  if (!r.ok) return false;
+  CODE = code; try { sessionStorage.setItem('code', code); } catch {}
+  return true;
+}
+(async () => {
+  let required = false;
+  try { required = (await (await _fetch('/api/gate')).json()).required; } catch {}
+  if (required && !(CODE && (await unlock(CODE)))) {
+    const gate = $('#gate'); gate.hidden = false; $('#gateInput').focus();
+    $('#gateForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (await unlock($('#gateInput').value.trim())) { gate.hidden = true; boot(); }
+      else { $('#gateErr').hidden = false; $('#gateInput').select(); }
+    });
+  } else boot();
+})();
